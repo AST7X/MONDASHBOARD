@@ -395,6 +395,13 @@ body.focus #side,body.focus #bnav{display:none}body.focus .wrap.shell{display:bl
 [data-style=forest] :is(input,textarea,select){background:#f6f8f7;border:1px solid var(--bd);border-radius:12px}
 .card.dk .ttm{color:#fff}
 @media (max-width:899px){.grid>#stats{order:-4}}
+.czg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:10px}
+.czg label,.czw{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--mu)}
+.czg input,.czg select,.czw textarea{font-size:14px;color:var(--tx)}
+.czw textarea{min-height:80px}
+.czh3{margin:14px 0 6px;font-size:13px;font-weight:600}
+.czl{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:2px 12px;margin-bottom:10px}.czl em{font-style:normal;color:var(--mu);font-size:11px}
+.card.hid{display:none!important}
 @media (prefers-reduced-motion:reduce){[data-style=ink] .card.in,[data-style=ink] h1{animation:none}.rip{display:none}button{transition:none}.card.in{animation:none}.card{transition:none}}
 </style>
 </head>
@@ -403,7 +410,7 @@ body.focus #side,body.focus #bnav{display:none}body.focus .wrap.shell{display:bl
 <div id="land" role="dialog" aria-label="Accueil"><div class="lc"><div id="ic"><div class="isw"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--ac)"/><stop offset="1" style="stop-color:color-mix(in srgb,var(--ac) 50%,#000)"/></linearGradient></defs><rect x="4" y="4" width="112" height="112" rx="28" fill="url(#lg)"/><rect x="24" y="24" width="32" height="32" rx="9" fill="#fff" opacity=".95"/><rect x="64" y="24" width="32" height="20" rx="7" fill="#fff" opacity=".6"/><rect x="24" y="64" width="32" height="32" rx="9" fill="#fff" opacity=".6"/><rect x="64" y="52" width="32" height="44" rx="9" fill="#fff" opacity=".95"/></svg></div></div><div class="lt">Mon dashboard</div><p id="ls"></p><button class="pri" id="enter">Entrer →</button></div></div>
 <div class="wrap shell">
 <aside id="side" aria-label="Navigation">
- <div class="logo"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--ac)"/><stop offset="1" style="stop-color:color-mix(in srgb,var(--ac) 50%,#000)"/></linearGradient></defs><rect x="4" y="4" width="112" height="112" rx="28" fill="url(#lg2)"/><rect x="24" y="24" width="32" height="32" rx="9" fill="#fff" opacity=".95"/><rect x="64" y="24" width="32" height="20" rx="7" fill="#fff" opacity=".6"/><rect x="24" y="64" width="32" height="32" rx="9" fill="#fff" opacity=".6"/><rect x="64" y="52" width="32" height="44" rx="9" fill="#fff" opacity=".95"/></svg><span>Dashboard</span></div>
+ <div class="logo"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--ac)"/><stop offset="1" style="stop-color:color-mix(in srgb,var(--ac) 50%,#000)"/></linearGradient></defs><rect x="4" y="4" width="112" height="112" rx="28" fill="url(#lg2)"/><rect x="24" y="24" width="32" height="32" rx="9" fill="#fff" opacity=".95"/><rect x="64" y="24" width="32" height="20" rx="7" fill="#fff" opacity=".6"/><rect x="24" y="64" width="32" height="32" rx="9" fill="#fff" opacity=".6"/><rect x="64" y="52" width="32" height="44" rx="9" fill="#fff" opacity=".95"/></svg><span id="lgt">Dashboard</span></div>
  <div class="nvl">Menu</div>
  <button class="nv" data-go="accueil"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span>Accueil</span></button><button class="nv" data-go="projets"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span>Projets</span></button><button class="nv" data-go="focus"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4l2.5 1.5M9.5 2.5h5"/></svg><span>Focus</span></button><button class="nv" data-go="analyse"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span>Analyse</span></button><button class="nv" data-go="medias"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m10.5 9.5 4 2.5-4 2.5z"/></svg><span>Médias</span></button><button class="nv" data-go="outils"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h11M19 17h1"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17" r="2"/></svg><span>Outils</span></button><button class="nv" data-go="perso"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg><span>Perso</span></button>
  <div class="nvl">Général</div>
@@ -421,14 +428,14 @@ body.focus #side,body.focus #bnav{display:none}body.focus .wrap.shell{display:bl
 <div class="grid">
  <section class="card full nb" id="stats" data-tab="accueil"><div class="st" id="stg"></div></section>
 
- <section data-tab="accueil" class="card full ai"><div class="aih"><span class="spark">✦</span><div><h2>Assistant Claude</h2><div class="sub" style="text-transform:none;letter-spacing:0;font-size:13px">Résume tes notes, priorise tes tâches ou fais avancer tes projets.</div></div></div>
+ <section id="aicard" data-tab="accueil" class="card full ai"><div class="aih"><span class="spark">✦</span><div><h2>Assistant Claude</h2><div class="sub" style="text-transform:none;letter-spacing:0;font-size:13px">Résume tes notes, priorise tes tâches ou fais avancer tes projets.</div></div></div>
   <div class="chips" id="chips"></div><div class="chat" id="chat"></div>
   <div class="row"><input id="ai" placeholder="Pose ta question à Claude…"><button class="mic" data-mic="ai" aria-label="Dicter">🎙</button><button class="pri" id="as">Envoyer ✦</button></div></section>
 
- <section data-tab="outils" class="card"><h2>Liens favoris</h2><ul id="links"></ul>
+ <section id="lkcard" data-tab="outils" class="card"><h2>Liens favoris</h2><ul id="links"></ul>
   <div class="row"><input id="ln" placeholder="Nom"><input id="lu" placeholder="https://…"><button class="pri" id="la">+</button></div></section>
 
- <section data-tab="accueil" class="card"><h2>À faire</h2><ul id="todos"></ul>
+ <section id="tdcard" data-tab="accueil" class="card"><h2>À faire</h2><ul id="todos"></ul>
   <div class="row"><input id="ti" placeholder="Nouvelle tâche…"><button class="mic" data-mic="ti" aria-label="Dicter">🎙</button><button class="pri" id="ta">+</button></div></section>
 
  <section class="card" id="remc" data-tab="accueil"><h2>Rappels</h2><div id="rem"></div></section>
@@ -443,9 +450,9 @@ body.focus #side,body.focus #bnav{display:none}body.focus .wrap.shell{display:bl
   <div class="ctl"><button class="pri" id="ps">Démarrer</button><button id="pr">Réinitialiser</button></div>
   <div class="hint" style="text-align:center" id="pc"></div></section>
 
- <section class="card" id="wcard" data-tab="outils"><h2>Météo · Mali</h2><div class="wx" id="wx"></div><div class="hint" id="wh"></div><button class="pri" id="wb" style="margin-top:8px">Prévisions en direct</button></section>
+ <section class="card" id="wcard" data-tab="outils"><h2 id="wtt">Météo</h2><div class="wx" id="wx"></div><div class="hint" id="wh"></div><button class="pri" id="wb" style="margin-top:8px">Prévisions en direct</button></section>
 
- <section data-tab="outils" class="card"><h2>Derniers mails</h2><div class="tabs" style="justify-content:flex-start"><button id="mf0" class="on">Tous</button><button id="mf1">Non lus</button></div><div id="mails"></div><button id="mr" style="margin-top:8px">Actualiser</button></section>
+ <section id="mlcard" data-tab="outils" class="card"><h2>Derniers mails</h2><div class="tabs" style="justify-content:flex-start"><button id="mf0" class="on">Tous</button><button id="mf1">Non lus</button></div><div id="mails"></div><button id="mr" style="margin-top:8px">Actualiser</button></section>
 
  <section class="card" id="clcard" data-tab="outils"><h2>Horloges</h2><div id="clk"></div></section>
 
@@ -472,6 +479,16 @@ body.focus #side,body.focus #bnav{display:none}body.focus .wrap.shell{display:bl
  <section class="card full" id="mscard" data-tab="medias"><h2>Mes médias</h2><div class="msrc" id="msrc"></div><div class="mrow"><input id="mn" placeholder="Nom"><input id="mu" placeholder="https://…"><button class="pri" id="mad" aria-label="Ajouter">+</button></div></section>
 
  <section class="card full" id="mmcard" data-tab="medias"><h2>Newsletters et médias reçus par mail</h2><div class="mrow" style="margin:0 0 8px"><input id="mmq" aria-label="Filtre Gmail"><button id="mmr">Actualiser</button></div><div id="mmails"></div><div class="hint">Filtre Gmail modifiable. Seuls l’expéditeur et l’objet sont affichés.</div></section>
+
+ <section class="card full" id="czcard" data-tab="outils"><h2>Personnalisation</h2>
+  <div class="czg"><label>Prénom<input id="czn" placeholder="Ton prénom"></label><label>Titre du site<input id="czt" placeholder="Mon dashboard"></label><label>E-mail Gmail (liens des mails)<input id="cze" type="email" placeholder="toi@gmail.com" autocomplete="email"></label><label>Ville météo<input id="czc" placeholder="Bamako"></label><label>Filtre des mails (recherche Gmail)<input id="czm" placeholder="in:inbox"></label></div>
+  <div class="czg"><label>Horloge 1<select id="czk0"></select></label><label>Horloge 2<select id="czk1"></select></label><label>Horloge 3<select id="czk2"></select></label></div>
+  <label class="czw">Pensées du jour (une par ligne, vide = par défaut)<textarea id="czq"></textarea></label>
+  <label class="nl"><input type="checkbox" id="czl"> Afficher la page d’entrée au lancement</label>
+  <div class="czh3">Assistant hors claude.ai</div>
+  <div class="czg"><label>Adresse de la fonction serveur<input id="cza" placeholder="https://….workers.dev"></label><label>Mot de passe (reste sur cet appareil)<input id="czs" type="password" autocomplete="off"></label></div>
+  <div class="czh3">Cartes affichées</div><div id="czh" class="czl"></div>
+  <button id="czr">Tout réinitialiser</button><div class="hint">Tout est enregistré automatiquement dans le site et se synchronise entre tes appareils, sauf le mot de passe. Les mails viennent du compte Gmail relié à Claude : l’e-mail sert à ouvrir les bons liens.</div></section>
 
  <section class="card" id="rcard" data-tab="outils"><h2>Réglages</h2><div class="rg"><div id="sw"></div><select id="bg" aria-label="Fond 3D"><option value="0">Formes</option><option value="1">Vagues</option><option value="2">Galaxie</option><option value="3">Grille</option></select><button id="ik">Style</button><button id="fc">◎ Focus</button><button id="theme" aria-label="Changer de thème">◐ Thème</button></div></section>
 
@@ -547,15 +564,15 @@ $('notes').value=S.notes;
 $('notes').oninput=e=>{S.notes=e.target.value;save()};
 
 /* météo */
-const CITIES=[['Paris','Europe/Paris'],['Lyon','Europe/Paris'],['Marseille','Europe/Paris'],['Bruxelles','Europe/Brussels'],['Amsterdam','Europe/Amsterdam'],['Genève','Europe/Zurich'],['Londres','Europe/London'],['Madrid','Europe/Madrid'],['Rome','Europe/Rome'],['Berlin','Europe/Berlin'],['Casablanca','Africa/Casablanca'],['Bamako','Africa/Bamako'],['Dallas','America/Chicago'],['Dakar','Africa/Dakar'],['Montréal','America/Toronto'],['New York','America/New_York'],['Los Angeles','America/Los_Angeles'],['Dubaï','Asia/Dubai'],['Tokyo','Asia/Tokyo'],['Sydney','Australia/Sydney']];
+const CITIES=[['Paris','Europe/Paris'],['Lyon','Europe/Paris'],['Marseille','Europe/Paris'],['Bruxelles','Europe/Brussels'],['Amsterdam','Europe/Amsterdam'],['Genève','Europe/Zurich'],['Londres','Europe/London'],['Madrid','Europe/Madrid'],['Rome','Europe/Rome'],['Berlin','Europe/Berlin'],['Casablanca','Africa/Casablanca'],['Bamako','Africa/Bamako'],['Dallas','America/Chicago'],['Abidjan','Africa/Abidjan'],['Ouagadougou','Africa/Ouagadougou'],['Conakry','Africa/Conakry'],['Niamey','Africa/Niamey'],['Lagos','Africa/Lagos'],['Alger','Africa/Algiers'],['Tunis','Africa/Tunis'],['Le Caire','Africa/Cairo'],['Nairobi','Africa/Nairobi'],['Johannesburg','Africa/Johannesburg'],['Miami','America/New_York'],['São Paulo','America/Sao_Paulo'],['Mexico','America/Mexico_City'],['Istanbul','Europe/Istanbul'],['Moscou','Europe/Moscow'],['Delhi','Asia/Kolkata'],['Pékin','Asia/Shanghai'],['Singapour','Asia/Singapore'],['Séoul','Asia/Seoul'],['Dakar','Africa/Dakar'],['Montréal','America/Toronto'],['New York','America/New_York'],['Los Angeles','America/Los_Angeles'],['Dubaï','Asia/Dubai'],['Tokyo','Asia/Tokyo'],['Sydney','Australia/Sydney']];
 const MALI=[[33,18,0,'Saison sèche fraîche'],[36,21,0,'Saison sèche, harmattan'],[38,24,3,'Début de la chaleur'],[39,26,20,'Pic de chaleur'],[37,25,70,'Premières pluies'],[34,23,125,'Saison des pluies'],[31,22,210,'Saison des pluies'],[30,22,280,'Pic des pluies'],[31,22,190,'Saison des pluies'],[33,22,60,'Fin des pluies'],[34,21,5,'Début de la saison sèche'],[33,18,0,'Saison sèche fraîche']];
 function rW(){
-  const m=MALI[new Date().getMonth()];let t='';
-  try{t=new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit',timeZone:'Africa/Bamako'})}catch(e){}
-  $('wx').innerHTML=`<b>Bamako</b><span>${m[3]}</span><div class="wxn"><strong>${m[0]}°</strong> / ${m[1]}° · environ ${m[2]} mm de pluie ce mois-ci</div>`;
-  $('wh').textContent=`Aperçu du climat habituel de ce mois, pas une prévision. Il est ${t} à Bamako.`;
+  const c=((S.pf&&S.pf.city)||'Bamako').trim()||'Bamako',isB=c.toLowerCase()==='bamako',f=CITIES.find(x=>x[0].toLowerCase()===c.toLowerCase());let t='';
+  try{t=new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit',timeZone:f?f[1]:undefined})}catch(e){}
+  if(isB){const m=MALI[new Date().getMonth()];$('wx').innerHTML=`<b>Bamako</b><span>${m[3]}</span><div class="wxn"><strong>${m[0]}°</strong> / ${m[1]}° · environ ${m[2]} mm de pluie ce mois-ci</div>`;$('wh').textContent=`Aperçu du climat habituel de ce mois, pas une prévision. Il est ${t} à Bamako.`}
+  else{$('wx').innerHTML=`<b>${esc(c)}</b><span>Prévisions en direct via le bouton ci-dessous</span>`;$('wh').textContent=t?`Il est ${t} à ${c}.`:''}
 }
-$('wb').onclick=()=>window.open('https://wttr.in/Bamako?lang=fr','_blank','noopener');
+$('wb').onclick=()=>window.open('https://wttr.in/'+encodeURIComponent((S.pf&&S.pf.city)||'Bamako')+'?lang=fr','_blank','noopener');
 rW();setInterval(rW,60000);
 
 /* pomodoro */
@@ -566,7 +583,7 @@ function rP(){
   $('tm').textContent=fmt(left);if($('tmm'))$('tmm').textContent=fmt(left);if($('ttp'))$('ttp').textContent=tick?'⏸ Pause':'▶ Démarrer';$('pb').style.width=(100-left/(M[mode][1]*60)*100)+'%';
   $('pc').textContent=S.pomo?`${S.pomo} session${S.pomo>1?'s':''} terminée${S.pomo>1?'s':''} aujourd’hui`:'';
   $('ps').textContent=tick?'Pause':'Démarrer';
-  document.title=tick?fmt(left)+' · Dashboard':'Mon dashboard';
+  document.title=tick?fmt(left)+' · Dashboard':((S.pf&&S.pf.title)||'Mon dashboard');
 }
 function beep(){try{const a=new AudioContext(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=660;o.start();o.stop(a.currentTime+.4)}catch(e){}}
 function stop(){clearInterval(tick);tick=null}
@@ -748,9 +765,10 @@ $('bg').value=S.bg|0;
 $('bg').onchange=e=>{S.bg=+e.target.value;save();if(window.setBg)setBg(S.bg)};
 $('fc').onclick=()=>{const on=document.body.classList.toggle('focus');$('fc').textContent=on?'Quitter le focus':'◎ Focus'};
 const Q=['Un petit pas chaque jour vaut mieux qu’un grand saut demain.','Commence par le plus simple, l’élan fera le reste.','Une tâche terminée est une victoire, même petite.','Ce qui compte, c’est la régularité, pas l’intensité.','Respire, priorise, avance.','Fais une chose à la fois, et fais-la bien.','Le meilleur moment pour commencer, c’est maintenant.','Mieux vaut un projet imparfait livré qu’un projet parfait rêvé.','Protège ton temps : il est ton projet le plus précieux.','La curiosité ouvre toutes les portes.','Aujourd’hui, vise le progrès, pas la perfection.','Une bonne pause rend le travail meilleur.'];
-$('quote').textContent='“'+Q[Math.floor(Date.now()/864e5)%Q.length]+'”';
+function rQ(){const a=((S.pf&&S.pf.quotes)||'').split('\n').map(x=>x.trim()).filter(Boolean),L=a.length?a:Q;$('quote').textContent='“'+L[Math.floor(Date.now()/864e5)%L.length]+'”'}
+rQ();
 function rC(){
-  $('clk').innerHTML=['Bamako','Paris','Dallas'].map(n=>{const z=CITIES.find(c=>c[0]===n)[1];return `<div class="ck"><span>${n}</span><b>${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit',timeZone:z})}</b></div>`}).join('');
+  $('clk').innerHTML=((S.pf&&S.pf.clk)||['Bamako','Paris','Dallas']).filter(Boolean).map(n=>{const f=CITIES.find(c=>c[0]===n);if(!f)return '';const z=f[1];return `<div class="ck"><span>${n}</span><b>${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit',timeZone:z})}</b></div>`}).join('');
 }
 rC();setInterval(rC,20000);
 
@@ -762,18 +780,18 @@ addEventListener('pointermove',e=>{if(!['ink','alta'].includes(document.document
 
 /* mails */
 const mailErr={server_not_connected:'Connecte Gmail dans claude.ai (Connecteurs), puis recharge la page.',needs_reauth:'La connexion Gmail a expiré : reconnecte-la dans claude.ai.',approval_required:'Autorise l’accès à Gmail quand claude.ai te le demande, puis clique sur Actualiser.',blocked_by_policy:'Gmail est bloqué par ton organisation.'};
-let mq='in:inbox';
+let mq=0;
 async function loadMail(){
   const box=$('mails');box.innerHTML='<div class="empty">Chargement…</div>';
   try{
     const m=await window.claude.use('mcp');if(!m)throw{code:'na'};
-    const r=await m.callTool('Gmail','search_threads',{query:mq,pageSize:7,view:'THREAD_VIEW_SUMMARY'});
+    const r=await m.callTool('Gmail','search_threads',{query:mbase()+(mq?' is:unread':''),pageSize:7,view:'THREAD_VIEW_SUMMARY'});
     let p=r.payload;if(typeof p==='string'){try{p=JSON.parse(p)}catch(e){p=null}}
     const th=(p&&p.threads)||[];
-    box.innerHTML=th.length?'<ul>'+th.map(t=>{const x=(t.messages||[])[0]||{};const s=String(x.sender||'');const nm=s.replace(/<.*>/,'').replace(/"/g,'').trim()||s;return `<li class="it mail"><a href="https://mail.google.com/mail/u/0/#inbox/${esc(t.id)}" target="_blank" rel="noopener noreferrer"><b>${esc(nm)}</b><span>${esc(x.subject||'(sans objet)')}</span></a></li>`}).join('')+'</ul>':'<div class="empty">'+(mq==='in:inbox'?'Boîte de réception vide.':'Aucun mail non lu.')+'</div>';
+    box.innerHTML=th.length?'<ul>'+th.map(t=>{const x=(t.messages||[])[0]||{};const s=String(x.sender||'');const nm=s.replace(/<.*>/,'').replace(/"/g,'').trim()||s;return `<li class="it mail"><a href="${esc(mailUrl(t.id))}" target="_blank" rel="noopener noreferrer"><b>${esc(nm)}</b><span>${esc(x.subject||'(sans objet)')}</span></a></li>`}).join('')+'</ul>':'<div class="empty">'+(mq?'Aucun mail non lu.':'Boîte de réception vide.')+'</div>';
   }catch(e){box.innerHTML=`<div class="empty">${mailErr[e&&e.code]||'Impossible de charger les mails pour l’instant.'}</div>`}
 }
-[0,1].forEach(i=>{$('mf'+i).onclick=()=>{mq=i?'in:inbox is:unread':'in:inbox';$('mf0').classList.toggle('on',!i);$('mf1').classList.toggle('on',!!i);loadMail()}});
+[0,1].forEach(i=>{$('mf'+i).onclick=()=>{mq=i;$('mf0').classList.toggle('on',!i);$('mf1').classList.toggle('on',!!i);loadMail()}});
 $('mr').onclick=loadMail;loadMail();
 
 /* assistant */
@@ -793,7 +811,7 @@ function mkTools(){return [
  {name:'add_project',description:'Ajoute un projet au kanban. column : todo, doing ou done. priority : b, m ou h. tag : Perso, Travail, Études ou Urgent. due : AAAA-MM-JJ (optionnel).',inputSchema:sch({text:{type:'string'},column:{type:'string'},priority:{type:'string'},tag:{type:'string'},due:{type:'string'}},['text']),execute:a=>{const c=['todo','doing','done'].includes(a.column)?a.column:'todo',p={id:uid(),t:String(a.text)};if(DRE.test(String(a.due||'')))p.due=a.due;if(PRI[a.priority])p.pri=a.priority;if(TG[a.tag])p.tag=a.tag;S.proj[c].push(p);save();rK();return 'ok'}},
  {name:'add_countdown',description:'Ajoute un compte à rebours vers une date AAAA-MM-JJ.',inputSchema:sch({text:{type:'string'},date:{type:'string'}},['text','date']),execute:a=>{if(!DRE.test(String(a.date)))throw new Error('date invalide');S.cd.push({id:uid(),t:String(a.text),d:a.date});save();rCD();return 'ok'}},
  {name:'add_habit',description:'Ajoute une habitude à suivre chaque jour.',inputSchema:sch({name:{type:'string'}},['name']),execute:a=>{S.hab.push({id:uid(),n:String(a.name),d:{}});save();rH();return 'ok'}},
- {name:'read_mails',description:'Renvoie les 7 derniers mails de la boîte de réception (expéditeur et objet seulement). unread_only pour les non lus.',inputSchema:sch({unread_only:{type:'boolean'}}),execute:async a=>{const m=await window.claude.use('mcp');if(!m)throw new Error('Gmail indisponible');const r=await m.callTool('Gmail','search_threads',{query:a.unread_only?'in:inbox is:unread':'in:inbox',pageSize:7,view:'THREAD_VIEW_SUMMARY'});let p=r.payload;if(typeof p==='string'){try{p=JSON.parse(p)}catch(e){p=null}}return ((p&&p.threads)||[]).map(t=>{const x=(t.messages||[])[0]||{};return {de:x.sender,objet:x.subject}})}}
+ {name:'read_mails',description:'Renvoie les 7 derniers mails de la boîte de réception (expéditeur et objet seulement). unread_only pour les non lus.',inputSchema:sch({unread_only:{type:'boolean'}}),execute:async a=>{const m=await window.claude.use('mcp');if(!m)throw new Error('Gmail indisponible');const r=await m.callTool('Gmail','search_threads',{query:mbase()+(a.unread_only?' is:unread':''),pageSize:7,view:'THREAD_VIEW_SUMMARY'});let p=r.payload;if(typeof p==='string'){try{p=JSON.parse(p)}catch(e){p=null}}return ((p&&p.threads)||[]).map(t=>{const x=(t.messages||[])[0]||{};return {de:x.sender,objet:x.subject}})}}
 ]}
 async function ask(q){
   q=q.trim();if(busy||!q)return;busy=1;$('ai').value='';addM('u',q);const el=addM('a','…');
@@ -812,11 +830,11 @@ $('as').onclick=()=>ask($('ai').value);$('ai').onkeydown=e=>{if(e.key==='Enter')
 [['Résume ma journée','Fais-moi un point sur ma journée : tâches, projets, habitudes, événements et humeur.'],['Priorise mes tâches','Aide-moi à prioriser mes tâches du jour.'],['Lis mes mails non lus','Lis mes mails non lus et dis-moi lesquels semblent importants.'],['Planifie ma semaine','Propose un plan pour ma semaine d’après mes projets et événements, et ajoute ce que je valide.']].forEach(([l,q])=>{const b=document.createElement('button');b.textContent=l;b.onclick=()=>ask(q);$('chips').appendChild(b)});
 
 /* données communes */
-function ensure(){S.links=S.links||[];S.todos=S.todos||[];S.proj=S.proj||{};['todo','doing','done'].forEach(k=>S.proj[k]=S.proj[k]||[]);S.hab=S.hab||[];S.ev=S.ev||{};S.cd=S.cd||[];S.jr=S.jr||{};S.bd=S.bd||[];S.cur=S.cur||'€';S.nt=S.nt||{on:0,h:'21:00',m:'08:00',pomo:1,hab:1,mt:1,due:1};S.notes=S.notes||''}
+function ensure(){S.links=S.links||[];S.todos=S.todos||[];S.proj=S.proj||{};['todo','doing','done'].forEach(k=>S.proj[k]=S.proj[k]||[]);S.hab=S.hab||[];S.ev=S.ev||{};S.cd=S.cd||[];S.jr=S.jr||{};S.bd=S.bd||[];S.cur=S.cur||'€';S.nt=S.nt||{on:0,h:'21:00',m:'08:00',pomo:1,hab:1,mt:1,due:1};S.pf=Object.assign(DEFPF(),S.pf||{});S.hide=S.hide||{};S.notes=S.notes||''}
 function mrg(a,b){
   const o=JSON.parse(JSON.stringify(a)),A=a||{},B=b||{};
   const u=(x,y)=>{const m=new Map();[...(x||[]),...(y||[])].forEach(i=>{if(i&&!m.has(i.id))m.set(i.id,i)});return[...m.values()]};
-  o.links=u(A.links,B.links);o.todos=u(A.todos,B.todos);o.cd=u(A.cd,B.cd);o.bd=u(A.bd,B.bd);o.media=A.media||B.media;o.mmq=A.mmq||B.mmq;
+  o.links=u(A.links,B.links);o.todos=u(A.todos,B.todos);o.cd=u(A.cd,B.cd);o.bd=u(A.bd,B.bd);o.media=A.media||B.media;o.mmq=A.mmq||B.mmq;o.pf=Object.assign({},B.pf,A.pf);o.hide=Object.assign({},B.hide,A.hide);
   o.proj={};['todo','doing','done'].forEach(k=>o.proj[k]=u((A.proj||{})[k],(B.proj||{})[k]));
   o.hab=u(A.hab,B.hab).map(h=>{const x=(A.hab||[]).find(z=>z.id===h.id),y=(B.hab||[]).find(z=>z.id===h.id);return Object.assign({},h,{d:Object.assign({},x&&x.d,y&&y.d)})});
   o.ev={};new Set([...Object.keys(A.ev||{}),...Object.keys(B.ev||{})]).forEach(k=>o.ev[k]=u((A.ev||{})[k],(B.ev||{})[k]));
@@ -932,7 +950,7 @@ $('imf').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileRea
 
 /* tout redessiner */
 function applyAll(){
-  ensure();rLinks();rTodos();$('notes').value=S.notes||'';rP();rK();rH();rCal();rCD();rJ();rW();rB();rMed();rA();rNf();$('bcur').value=S.cur||'€';
+  ensure();rLinks();rTodos();$('notes').value=S.notes||'';rP();rK();rH();rCal();rCD();rJ();rW();rB();rMed();rA();rNf();rCz();applyPf();$('bcur').value=S.cur||'€';
   setSty(STY.includes(S.sty)?S.sty:'alta',1);if(S.acc)setAcc(S.acc,1);$('bg').value=S.bg|0;if(window.setBg)setBg(S.bg|0);
 }
 
@@ -954,7 +972,7 @@ $('msrc').onclick=e=>{const x=e.target.dataset.mx;if(!x)return;S.media=media().f
 const addMd=()=>{const n=$('mn').value.trim();let u=$('mu').value.trim();if(!u)return;if(!/^https?:\/\//i.test(u))u='https://'+u;try{new URL(u)}catch(e){return}S.media=media().concat([{id:uid(),n:n||new URL(u).hostname.replace(/^www\./,''),u}]);$('mn').value=$('mu').value='';save();rMed()};
 $('mad').onclick=addMd;
 let mmDone=false;
-function mailLi(t){const x=(t.messages||[])[0]||{},s=String(x.sender||''),nm=s.replace(/<.*>/,'').replace(/"/g,'').trim()||s;return `<li class="it mail"><a href="https://mail.google.com/mail/u/0/#inbox/${esc(t.id)}" target="_blank" rel="noopener noreferrer"><b>${esc(nm)}</b><span>${esc(x.subject||'(sans objet)')}</span></a></li>`}
+function mailLi(t){const x=(t.messages||[])[0]||{},s=String(x.sender||''),nm=s.replace(/<.*>/,'').replace(/"/g,'').trim()||s;return `<li class="it mail"><a href="${esc(mailUrl(t.id))}" target="_blank" rel="noopener noreferrer"><b>${esc(nm)}</b><span>${esc(x.subject||'(sans objet)')}</span></a></li>`}
 async function loadMM(){
   mmDone=true;const box=$('mmails');box.innerHTML='<div class="empty">Chargement…</div>';
   try{
@@ -1066,7 +1084,7 @@ function rNf(){
   const n=S.nt||{},perm=window.Notification?Notification.permission:'indisponible';
   $('nfp').checked=!!n.pomo;$('nfh').checked=!!n.hab;$('nfht').value=n.h||'21:00';$('nfm').checked=!!n.mt;$('nfmt').value=n.m||'08:00';$('nfd').checked=!!n.due;
   $('nfon').textContent=n.on?'Désactiver':'Activer';$('bdg').style.display=n.on?'block':'none';
-  $('nfst').textContent=n.on?(perm==='granted'?'Notifications système autorisées sur cet appareil.':'Rappels affichés dans la page. Les notifications système ne sont pas autorisées ici.'):'Désactivées.';
+  $('nfst').textContent=n.on?(perm==='granted'?'Notifications système autorisées sur cet appareil.':'Rappels affichés dans la page. Les notifications système ne sont pas autorisées ici.'):'Désactivées.';if(window.self!==window.top&&n.on)$('nfst').textContent+=' Page intégrée : le navigateur bloque souvent les notifications système.';
 }
 async function enableN(){
   const n=S.nt;if(n.on){n.on=0;save();rNf();return}
@@ -1094,10 +1112,10 @@ async function askProxy(q,el){
   const tl=mkTools(),tools=tl.map(t=>({name:t.name,description:t.description,input_schema:t.inputSchema})),msgs=H.concat([{role:'user',content:ctxStr()+'\n\nMessage : '+q}]);let text='';
   const key=()=>{try{return localStorage.getItem('dash:secret')||''}catch(e){return ''}};
   for(let i=0;i<6;i++){
-    const r=await fetch(PROXY,{method:'POST',headers:{'content-type':'application/json','x-dash-key':key()},body:JSON.stringify({messages:msgs,tools})}).catch(()=>null);
+    const r=await fetch((S.pf&&S.pf.api)||PROXY,{method:'POST',headers:{'content-type':'application/json','x-dash-key':key()},body:JSON.stringify({messages:msgs,tools})}).catch(()=>null);
     if(!r)throw perr('Assistant injoignable : vérifie la fonction serveur.');
     if(r.status===401){const k=window.prompt('Clé d’accès de l’assistant ?');if(!k)throw perr('Clé d’accès requise.');try{localStorage.setItem('dash:secret',k)}catch(e){}i--;continue}
-    if(r.status===404)throw perr('Assistant non configuré : la fonction serveur est introuvable.');
+    if(r.status===404)throw perr('Assistant non configuré : renseigne son adresse dans Outils › Personnalisation.');
     const d=await r.json().catch(()=>({}));if(!r.ok)throw perr((d.error&&d.error.message)||'Erreur de l’assistant.');
     const c=d.content||[],t=c.filter(b=>b.type==='text').map(b=>b.text).join('');if(t){text=t;el.textContent=t}
     const uses=c.filter(b=>b.type==='tool_use');if(d.stop_reason!=='tool_use'||!uses.length)return text;
@@ -1125,12 +1143,47 @@ addEventListener('hashchange',()=>showTab(location.hash.slice(1),true));
 rMed();window.anReady=true;rA();
 {let t0=location.hash.slice(1);if(!TABS.includes(t0)){try{t0=localStorage.getItem('dash:tab')}catch(e){}}showTab(TABS.includes(t0)?t0:'accueil',true)}
 
+/* personnalisation */
+function DEFPF(){return{name:'',email:'',title:'Mon dashboard',city:'Bamako',clk:['Bamako','Paris','Dallas'],quotes:'',land:1,mbase:'',api:''}}
+function mailUrl(id){const e=((S.pf&&S.pf.email)||'').trim();return 'https://mail.google.com/mail/'+(e?'?authuser='+encodeURIComponent(e):'u/0/')+'#inbox/'+encodeURIComponent(id)}
+function mbase(){return((S.pf&&S.pf.mbase)||'').trim()||'in:inbox'}
+function applyPf(){
+  ensure();const p=S.pf,t=p.title||'Mon dashboard';
+  const hh=new Date().getHours();$('hello').textContent=(hh<6||hh>=18?'Bonsoir':'Bonjour')+(p.name?' '+p.name:'');
+  document.title=t;$('lgt').textContent=t;const lt=document.querySelector('.lt');if(lt)lt.textContent=t;
+  $('wtt').textContent='Météo · '+(p.city||'Bamako');
+  rQ();rC();rW();
+  document.querySelectorAll('.grid>.card[id]').forEach(c=>c.classList.toggle('hid',!!S.hide[c.id]));
+}
+function rCz(){
+  ensure();const p=S.pf;
+  $('czn').value=p.name;$('czt').value=p.title;$('cze').value=p.email;$('czl').checked=!!p.land;$('czc').value=p.city;
+  [0,1,2].forEach(i=>{$('czk'+i).innerHTML='<option value="">—</option>'+CITIES.map(c=>`<option${c[0]===(p.clk||[])[i]?' selected':''}>${esc(c[0])}</option>`).join('')});
+  $('czq').value=p.quotes;$('czm').value=p.mbase;$('cza').value=p.api;
+  try{$('czs').value=localStorage.getItem('dash:secret')||''}catch(e){}
+  $('czh').innerHTML=[...document.querySelectorAll('.grid>.card[id]')].filter(c=>c.id!=='czcard').map(c=>{const h2=c.querySelector('h2'),nm=h2?h2.textContent:(c.id==='stats'?'Tuiles de statistiques':c.id);return `<label class="nl"><input type="checkbox" data-hid="${c.id}"${S.hide[c.id]?'':' checked'}> ${esc(nm)} <em>${esc(c.dataset.tab)}</em></label>`}).join('');
+}
+const setPf=(k,v)=>{S.pf[k]=v;save();applyPf()};
+$('czn').oninput=e=>setPf('name',e.target.value.trim());
+$('czt').oninput=e=>setPf('title',e.target.value.trim());
+$('cze').onchange=e=>setPf('email',e.target.value.trim());
+$('czl').onchange=e=>setPf('land',e.target.checked?1:0);
+$('czc').onchange=e=>setPf('city',e.target.value.trim()||'Bamako');
+[0,1,2].forEach(i=>{$('czk'+i).onchange=e=>{const a=[...(S.pf.clk||[])];a[i]=e.target.value;S.pf.clk=a;save();rC()}});
+$('czq').onchange=e=>setPf('quotes',e.target.value);
+$('czm').onchange=e=>{setPf('mbase',e.target.value.trim());loadMail()};
+$('cza').onchange=e=>setPf('api',e.target.value.trim());
+$('czs').onchange=e=>{try{localStorage.setItem('dash:secret',e.target.value)}catch(x){}};
+$('czh').onchange=e=>{const id=e.target.dataset.hid;if(!id)return;if(e.target.checked)delete S.hide[id];else S.hide[id]=1;save();applyPf()};
+$('czr').onclick=()=>{S.pf=DEFPF();S.hide={};save();rCz();applyPf()};
+rCz();applyPf();
+
 /* page d’entrée */
 (function(){
-  const L=$('land');if(!L)return;let seen=false;try{seen=sessionStorage.getItem('dash:in')}catch(e){}
+  const L=$('land');if(!L)return;if(!S.pf.land){L.remove();return}let seen=false;try{seen=sessionStorage.getItem('dash:in')}catch(e){}
   if(seen){L.remove();return}
   const h=new Date().getHours();
-  $('ls').textContent=(h<6||h>=18?'Bonsoir':'Bonjour')+' · '+new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+  $('ls').textContent=(h<6||h>=18?'Bonsoir':'Bonjour')+(S.pf.name?' '+S.pf.name:'')+' · '+new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
   const go=()=>{if(!document.body.contains(L))return;try{sessionStorage.setItem('dash:in','1')}catch(e){}L.classList.add('out');setTimeout(()=>L.remove(),650)};
   $('enter').onclick=go;
   document.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
